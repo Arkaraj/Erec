@@ -1,0 +1,25 @@
+{
+  "name": "erec",
+  "version": "1.0.0",
+  "description": "Repo to test out how to create queue system using redis in node js, using bull.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon --exec ts-node src/app.ts",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bull": "^3.15.7",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.9",
+    "bull": "^4.2.1",
+    "express": "^4.17.2",
+    "ts-node": "^10.4.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.4"
+  }
+}
