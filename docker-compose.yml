@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6379:6379
+
+  server:
+    container_name: Erec
+    build:
+      context: ./
+    links:
+      - redis
+    environment:
+      REDIS_URL: redis:6379
+    ports:
+      - 3005:3005
+    volumes:
+      - ./:/var/app
+    depends_on:
+      - redis
